@@ -32,8 +32,18 @@ app.post('/account', (request, response) => {
   return response.status(201).send();
 });
 
-app.get('/', (request, response) => {
-  return response.send('hello world');
+app.get('/statement', (request, response) => {
+  const { cpf } = request.headers;
+
+  const customer = customers.find(customer => customer.cpf === cpf);
+
+  if (!customer) {
+    return response.status(404).json({
+      error: 'Customer not found!',
+    });
+  }
+
+  return response.json(customer.statement);
 });
 
 app.listen(3333);
