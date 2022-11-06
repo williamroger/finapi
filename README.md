@@ -11,7 +11,7 @@
 - [] Deve ser possível deletar uma conta
 
 ### Regras de Negócio
-- [] Não deve ser possível criar uma conta com CPF já existente
+- [x] Não deve ser possível criar uma conta com CPF já existente
 - [] Não deve ser possível fazer depósito em uma conta inexistente
 - [] Não deve ser possível buscar extrato bancário de uma conta inexistente
 - [] Não deve ser possível fazer saque em uma conta inexistente
